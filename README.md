@@ -12,6 +12,6 @@ Scripts to be used:
 
 or
 
-3. buildQLF.R, return qlf object;
+3. buildQLF.R, makes MDplot, return qlf object;
 4. pairHeatmap.R, makes MDSplot, Heatmap (logCPM);
 5. (optional) barcodeGO.R
