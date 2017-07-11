@@ -1,6 +1,8 @@
 # edgeRscripts
 R scripts for edgeR
 
+binddata.R can be used to make a data.frame from multiple gene count file (txt).
+
 Scripts to be used:
 1. buildDGE.R, returns DGEList object;
 2. buildDesign.R, returns design;
