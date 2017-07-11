@@ -1,5 +1,5 @@
-# go_id は文字列。"GO:0003735" のように入力
-# labels はプロットのラベル。
+# go_id is a string. it requires double quotation (Ex. "GO:0003735")
+# labels are annotation on the plot, left, and right each.
 
 barcodeGO <- function(qlf,go_id,labels=c("Up","Down")){
   library(GO.db)
@@ -13,7 +13,7 @@ barcodeGO <- function(qlf,go_id,labels=c("Up","Down")){
   
   barcodeplot(qlf$table$logFC, ind[[1]], main=main,labels=labels, quantiles=c(-1,1),xlab="logFC")
   
-  # qlf ファイルからのlogFC データ抽出
+  # read logFC from qlf object
   
   sel_genes <- ind[[1]]
   gotable <- cbind(qlf$table[sel_genes,],genes=qlf$genes[sel_genes,])
@@ -21,6 +21,8 @@ barcodeGO <- function(qlf,go_id,labels=c("Up","Down")){
   gotable <- gotable[,c(i,1:(i-1))]
   fcsort <- order(gotable$logFC)
   gotable <- gotable[fcsort,]
+  
+  #return a table including genes and cpm.
   
   return(gotable)
   
