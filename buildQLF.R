@@ -1,5 +1,5 @@
-# contrast ‚Í”äŠrŠÖŒW‚ÌƒxƒNƒgƒ‹Bex. c(0,0,1,-1)
-# ã‹L‚Í4ŒQ‚ÅŒQ3‚ÆŒQ4‚ğ”äŠrB
+# contrast is a vector,like "c(0,0,1,-1)". this example has 4 levels and compare 3rd level over 4th.
+# the order of levels is based on "design".
 
 buildQLF <- function(y, design, contrast){
 	
