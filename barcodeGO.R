@@ -1,3 +1,5 @@
+# make barcode plot based on genes of a GO term.
+
 # go_id is a string. it requires double quotation (Ex. "GO:0003735")
 # labels are annotation on the plot, left, and right each.
 
