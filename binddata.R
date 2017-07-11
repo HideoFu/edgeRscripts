@@ -1,4 +1,5 @@
-# 引数はファイル名、タブ区切りファイル
+# arguments are filenames of tab separated value.
+# they must be sorted in the same order.
 
 binddata <- function(...){
 	k=length(list(...))
