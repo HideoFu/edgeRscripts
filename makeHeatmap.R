@@ -26,7 +26,7 @@ makeHeatmap <- function(y, design, con, cexR=0.8, n=50){
 
         heatmap.2(data, hclustfun=myclust, distfun=mydist, na.rm = TRUE, scale="none", dendrogram="both", margins=c(6,7), Rowv=TRUE, Colv=TRUE, symbreaks=TRUE, key=TRUE, symkey=FALSE, density.info="none", trace="none", main="log FC", cexRow=cexR, cexCol=1, labRow=datatable[,"symbol"],col=rev(redgreen(75)))
 
-	# logCPM Heatmap
+	# log2(CPM+1) Heatmap
 
 	m <- match(rownames(datatable),rownames(y$genes))
 	datatable2 <- cpm(y)[m,]
